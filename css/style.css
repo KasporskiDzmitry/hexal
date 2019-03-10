@@ -1,0 +1,435 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+html {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a img {
+    border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+
+
+/* General */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.clear:after {
+    content: "";
+    clear: both;
+    height: 0;
+    display: block;
+}
+
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url('../assets/fonts/Lato-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('../assets/fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato-Black';
+    src: url('../assets/fonts/Lato-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '﻿MavenProRegular';
+    src: url('../assets/fonts/MavenPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Header */
+
+header {
+    background: #323232;
+}
+
+.header-wrapper {
+    height: 60px;
+    position: relative;
+}
+
+.header-wrapper:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 26px 45px 0 45px;
+    border-color: #323232 transparent transparent transparent;
+    position: absolute;
+    bottom: -26px;
+    z-index: 20;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.header-wrapper:after {
+    position: absolute;
+    content: url(../assets/images/logo.png);
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -5px;
+    z-index: 30;
+}
+
+.header-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-49%);
+    top: 25px;
+    bottom: 20px;
+}
+
+.header-nav a:nth-child(2) {
+    margin-right: 200px;
+}
+
+.header-nav a {
+    font: 12px Lato-Bold, serif;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.header-nav a:hover {
+    color: #2f9882;
+    cursor: pointer;
+    transition: .5s;
+}
+
+/* Main */
+#hex-grid {
+    overflow: hidden;
+    margin-bottom: -5%;
+}
+
+.grid-outer-wrapper {
+    margin: 10px 10px 0px 10px;
+    border-color: #e4e9eb;
+    border-width: 2px;
+    border-style: solid none none none;
+}
+
+.hex-grid-wrapper {
+    position: relative;
+    margin: 30px 10% 0 23%;
+    width: 70%;
+}
+
+.hexagon {
+    position: relative;
+    transform: rotate(-60deg) skewY(30deg);
+    width: 173px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.hexagon-content {
+    width: 100%;
+    height: 100%;
+    transform: skewY(-30deg) rotate(60deg);
+}
+
+.cell-wrapper {
+    position: relative;
+    margin: 5px;
+    float: left;
+}
+
+.cell-content a img {
+    width: 100%;
+    height: 100%;
+}
+
+.cell-content {
+    position: relative;
+    text-align: center;
+}
+
+.cell-wrapper:nth-child(5) {
+    clear: both;
+}
+
+.cell-wrapper:nth-child(5),
+.cell-wrapper:nth-child(6),
+.cell-wrapper:nth-child(7),
+.cell-wrapper:nth-child(8),
+.cell-wrapper:nth-child(9) {
+    transform: translateX(-53%) translateY(-25%) rotate(-60deg) skewY(30deg);
+}
+
+.cell-wrapper:nth-child(10),
+.cell-wrapper:nth-child(11),
+.cell-wrapper:nth-child(12),
+.cell-wrapper:nth-child(13) {
+    transform: translateY(-50%) rotate(-60deg) skewY(30deg);
+}
+
+#about {
+    background: #2eb398;
+}
+
+.about-outer-wrapper {
+    width: 70%;
+    margin: 0 auto;
+    padding: 15px 2% 15px 2%;
+}
+
+.about-inner-wrapper {
+    border-width: 2px;
+    border-color: #219D84;
+    border-style: none solid none solid;
+    padding: 10px 2% 10px 2%;
+}
+
+.author-photo-wrapper {
+    float: left;
+    margin-right: 20px;
+}
+
+.author-photo {
+    background-image: url("../assets/images/me.jpg");
+    background-size: cover;
+}
+
+.author-name {
+    font-family: ﻿MavenProRegular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular, serif;
+    font-size: 30px;
+    color: rgba(215, 252, 245, 255);
+    padding-bottom: 10px;
+}
+
+.author-job {
+    font-family: ﻿MavenProRegular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular, serif;
+    font-size: 18px;
+    color: rgba(32, 129, 109, 255);
+    padding-bottom: 20px;
+}
+
+.about-author-text {
+    font-family: Lato-Regular, serif;
+    font-size: 12px;
+    color: rgba(215, 252, 245, 255);
+    line-height: 2;
+}
+
+.social-net-links {
+    float: right;
+    margin-top: 40px;
+}
+
+.social-net-links a {
+    width: 24px;
+    height: 24px;
+    display: block;
+    float: left;
+}
+
+.facebook {
+    background: url("../assets/images/Facebook.png");
+}
+
+.twitter {
+    background: url("../assets/images/Twitter.png");
+}
+
+.google {
+    background: url("../assets/images/Google.png");
+}
+
+.dribbble {
+    background: url("../assets/images/Dribbble.png");
+}
+
+.linkedin {
+    background: url("../assets/images/Linkedin.png");
+}
+
+.pinterest {
+    background: url("../assets/images/Pinterest.png");
+}
+
+/* Footer */
+
+#page-footer {
+    background: #323232;
+}
+
+.page-footer-outer-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 10px;
+}
+
+.page-footer-inner-wrapper {
+    border-width: 2px;
+    border-color: #2b2b2b;
+    border-style: solid none solid none;
+    padding: 3% 10% 3% 10%;
+}
+
+.contact-form {
+    width: 70%;
+    margin-right: 20px;
+    float: left;
+}
+
+.contact-form-name {
+    font-family: ﻿MavenProRegular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular, serif;
+    font-size: 30px;
+    color: rgba(224, 224, 224, 255);
+}
+
+.contact-form-descr {
+    font-family: ﻿MavenProRegular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular, serif;
+    font-size: 18px;
+    color: rgba(190, 190, 190, 255);
+    margin-bottom: 10px;
+}
+
+.contact-form input, textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    background: #454545;
+    border: none;
+    resize: none;
+    color: #bebebe;
+}
+
+.contact-form input, textarea:focus {
+    outline: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    opacity: 1; /* Firefox */
+    color: #bebebe;
+    font-family: ﻿MavenProRegular, serif;
+    font-size: 12px;
+}
+
+.contact-form button {
+    float: right;
+    padding: 10px;
+    width: 100px;
+    background: #2eb398;
+    border: none;
+    color: #e0e0e0;
+    text-transform: uppercase;
+    font-family: Lato-Bold, serif;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.contact-form button:hover,
+.contact-form button:focus,
+.contact-form button:active {
+    outline: none;
+    color: #2eb398;
+    background: #e0e0e0;
+    transition: .5s;
+}
+
+.contact-info p {
+    font-family: Lato-Regular, serif;
+    font-size: 12px;
+    color: rgba(190, 190, 190, 255);
+    line-height: 2;
+}
+
+.contact-info p span {
+    font-family: Lato-Black, serif;
+    color: rgba(224, 224, 224, 255);
+}
+
+.contacts-wrapper {
+    margin-top: 60px;
+}
+
+.contacts {
+    display: block;
+    padding-bottom: 10px;
+    font-family: Lato-Bold, serif;
+    font-size: 12px;
+    color: rgba(190, 190, 190, 255);
+}
+
+.contacts:before {
+    display: block;
+    float: left;
+    width: 10px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.address:before {
+    content: url("../assets/images/address.png");
+}
+
+.phone:before {
+    content: url("../assets/images/phone.png");
+}
+
+.email:before {
+    content: url("../assets/images/email.png");
+}
+
+.copyright-wrapper {
+    background: #222222;
+}
+
+.copyright {
+    font-family: ﻿MavenProRegular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular, serif;
+    font-size: 12px;
+    color: rgba(69, 69, 69, 255);
+    padding: 20px;
+    margin-left: 40px;
+}
+
+@media screen and (min-width: 1330px) {
+    
+}
